@@ -1,0 +1,246 @@
+<head>
+    <style>
+        body {
+        font-family: tahoma;
+        text-align: center;
+        margin: 0;
+        }
+
+        header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 6px;
+        background-color: rgb(229, 243, 226);
+        padding: 10px 20px;
+        color: rgb(61, 83, 66);
+        }
+
+        h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: rgb(61, 83, 66);
+        }
+
+        ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        }
+
+        li {
+        margin-left: 25px;
+        font-weight: bold;
+        letter-spacing: 1px;  
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: rgb(61, 83, 66);
+            
+        }
+
+        .h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: rgb(61, 83, 66);
+        }
+        
+        .aboutus {
+            height: 110vh;
+            width: 100%;
+            background-color: rgb(229, 243, 226);
+        }
+    
+        .abtus-img {
+            width: 400px;
+            height: 300px;
+        }
+
+        .abtuspg {
+            font-size: 1.25rem;
+            max-width: 600px;   /* controls how “thin” the paragraph is */
+            margin: 0 auto;     /* centers it */
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .abtus-section2 {
+            background-color: #f2efe4;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+            grid-template-rows: auto auto;          /* 2 rows */
+            gap: 24px;                              /* space between cells */
+            max-width: 100%;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            padding: 0 20px;
+        }
+
+        .grid-item {
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .grid-item-ourmission h2 {
+            text-align: left;
+            font-size: 2.5rem
+        }
+
+        .grid-item-ourmission p {
+            text-align: left;
+            font-size: 1.25rem;
+        }
+        .grid-item-ourstory h2 {
+            text-align: left;
+            font-size: 2.5rem
+        }
+
+        .grid-item-ourstory p {
+            text-align: left;
+            font-size: 1.25rem;
+        }
+
+        .ourmissionimg {
+            width: 600px;
+            height: 400x;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+        .ourstoryimg {
+            width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .greenbar {
+            height: 20vh;
+            width: 100%;
+            background-color: rgb(61, 83, 66);
+        }
+        .whatnow {
+            height: 110vh;
+            width: 100%;
+            background-color: #f2efe4;
+        }
+
+        .whatnow h1 {
+            font-size: 3.5rem;
+        }
+
+        .whatnowpg1 {
+            font-size: 1.25rem;
+            max-width: 600px;   /* controls how “thin” the paragraph is */
+            margin: 0 auto;     /* centers it */
+            line-height: 1.5;
+            text-align: left;
+        }
+        
+        .whatnowpg2 {
+            font-size: 1.25rem;
+            max-width: 600px;   /* controls how “thin” the paragraph is */
+            margin: 0 auto;     /* centers it */
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .hire-guidebtn {
+            background-color: #2d4c3b;
+            color: #f2efe4;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+<body>
+    <header>
+      <h3>Summit Seekers</h3>
+      <nav>
+        <ul>
+          <li><a href="website.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hikingpad.html">Begineer Hiking Pad</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="aboutus">
+        <br><br><br>
+        <h1>About Us</h1>
+        <br><br><br>
+        <img src="abtusimg.png" class="abtus-img">
+        <br><br>
+        <div class="abtuspg">
+            <p>Summit Seekers is a South Island–based guiding service run by local outdoor enthusiasts who love sharing New Zealand’s mountain trails.
+                We specialise in beginner-friendly hikes, personalised gear advice, and safe guided trips into some of the region’s most stunning landscapes.
+                Whether you’re new to hiking or looking for support on a bigger adventure, we focus on safety, clear communication, and creating memorable experiences on every walk.</p>
+        </div>
+    </section>
+
+
+
+    <section class="abtus-section2">
+        <div class="grid-item-ourmission">
+            <h2>Our Mission</h2>
+            <p>Our mission at Summit Seekers is to make New Zealand’s mountains accessible, safe, and enjoyable for everyone.
+                We aim to help beginners build confidence on the trail, give clear and honest gear advice, and lead guided trips that respect the environment and local communities.
+                Every hike we run is planned with safety, support, and a sense of adventure so people leave feeling proud of what they’ve achieved.</p>
+        </div>
+
+
+        <img src="ourmissionimg.jpg" class="ourmissionimg">
+
+        
+
+        <img src="ourstoryimg.jpg" class="ourstoryimg">
+
+        
+        <div class="grid-item-ourstory">
+            <h2>Our Story</h2>
+            <p>Summit Seekers began with a small group of friends who spent every spare weekend exploring the trails and peaks of New Zealand’s South Island.
+                After helping family and mates choose gear and plan safe routes, we realised there was a need for simple, friendly support for people new to hiking.
+                We turned that passion into a guiding service that focuses on small groups, clear communication, and building confidence step by step.
+                Today, Summit Seekers is about sharing the places we love, helping others discover the outdoors, and making sure every trip feels achievable, safe, and memorable.</p>
+        </div>
+
+    </section>
+
+    <section class="greenbar">
+    </section>
+
+
+
+    <section class="whatnow">
+        <br><br><br>
+        <h1>About Us</h1>
+        <br><br><br>
+        <div class="whatnowpg1">
+            <p>We’re working on expanding our range of trips while still keeping group sizes small and personal.
+                Over time, we plan to add new routes, multi-day adventures, and seasonal hikes so people can experience the mountains in different ways.
+                We’re also focused on improving our safety systems, training, and gear advice so every season we get better at supporting hikers of all levels.
+            </p>
+        </div>
+        <br><br>
+        <div class="whatnowpg2">
+            <p>If you’re new to hiking, our hiking guide is the best first step to build confidence on the trail.
+                If you already have a trip in mind but need advice, book a Gear Consultation and we’ll help you choose the right equipment.
+                Ready for a bigger challenge? Hire a Mountain Guide and we’ll plan a safe, memorable adventure together.
+                Still have questions? Get in touch and we’ll help you figure out what’s right for you.</p>
+        </div>
+        <br>
+        <button class="hire-guidebtn"><a href="website.html#hire-guide" class="hire-guidebtn">
+            Hire a Mountain Guide</a></button>
+    </section>
+</body>

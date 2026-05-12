@@ -1,0 +1,429 @@
+<head>
+    <style>
+      body {
+        font-family: tahoma;
+        text-align: center;
+        margin: 0;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 6px;
+        background-color: rgb(229, 243, 226);
+        padding: 10px 20px;
+        color: rgb(61, 83, 66);
+      }
+      h1 {
+        font-size: 5rem;
+        color: rgb(61, 83, 66);
+      }
+      h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: rgb(61, 83, 66);
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        margin-left: 25px;
+        font-weight: bold;
+        letter-spacing: 1px;  
+      }
+      .hero {
+        display: flex; /* This creates the side-by-side split */
+        height: 85vh;  /* This makes the section take up 80% of the screen height */
+        width: 100%;
+      }
+      .hero-left h1 {
+        max-width: 300px;
+      }
+
+      .hero-left p {
+        text-align: left;
+        max-width: 500px;
+      }
+
+      .hero-left {
+        flex: 1;
+        background-color: #f2efe4;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 50px;
+      }
+
+      .more-btn {
+        background-color: #2d4c3b;
+        color: #f2efe4;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        margin-top: 15px;
+        cursor: pointer;
+        width: 50%
+      }
+
+      .hero-right {
+        flex: 1; /* Takes up the other half */
+        background-image: url('mountain.jpg');
+        background-size: cover; /* Makes sure the image fills the whole side */
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .mountain-list{
+        background-color: #e2e7dd;
+        padding: 80px 40px;
+        font-family: tahoma;
+        height: 110vh
+      }
+
+      .mountain-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        max-width:1100px;
+        margin-left:auto;
+        margin-right: auto;
+      }
+
+      .mountain-info p {
+        text-align: left;
+        max-width: 500px;
+      }
+      
+      .mt-img {
+        width:220px;
+        height:220px;
+        object-fit: cover;
+      }
+
+      .guide-btn {
+        background-color: #2d4c3b;
+        color: #f2efe4;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+      
+      .hero2 {
+        display: flex; /* This creates the side-by-side split */
+        height: 90vh;  /* This makes the section take up 85% of the screen height */
+        width: 100%;
+      }
+
+      .hero2-left {
+        flex: 1; 
+        background-image: url('checklistimg.png');
+        background-size: cover; /* Makes sure the image fills the whole side */
+        background-position: center;
+        background-repeat: no-repeat;
+      } 
+
+      .hero2-right {
+        flex: 1; /* Takes up the other half */
+        background-color: #2d4c3b;
+        color: #f2efe4;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 50px;
+      }
+
+      .hero2-right h1 {
+        font-size: 2.5rem;
+        color: #f2efe4;
+        max-width: 100px;
+      }
+
+      .bp-hike {
+        list-style-type: disc; 
+        list-style-position: inside; 
+        display: block; /* Forces the container to stack vertically */
+        width: 100%;
+        padding-left: 0; /* 'inside' handles the dot, so we don't need extra padding */
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .bp-hike li {
+        display: list-item; /* This is the magic word for vertical stacking + dots */
+        margin-bottom: 10px; 
+        color: #f2efe4; /* Make sure they are visible on the green! */
+        text-align: left;
+      } 
+
+      .hikeguide-btn {
+        background-color: #f2efe4;
+        color: #2d4c3b;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+      
+      h2 {
+        font-size: 2em;
+        width: 100%;
+      }
+      section {
+        padding: 30px;
+        margin-bottom: 10px;
+      }
+      
+      .booking-section {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 40px;
+        background: #f2efe4;
+        height: 90vh;
+      }
+
+      /* left text column */
+      .booking-left {
+        flex: 1;
+        padding: 40px;
+        font-family: tahoma;
+        color: #2d4c3b;
+      }
+
+      .booking-left h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+       .booking-left h3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 1.2rem;
+       }
+
+      /* right form card */
+      .booking-right {
+        flex: 1;
+        max-width: 480px;
+        background: #fff7e6;    /* lighter cream/yellow */
+        padding: 30px 35px;
+        font-family: tahoma, sans-serif;
+      }
+      /* Tour Guide Booking Hire */
+      .booking-right h3 {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      /* right form card paragraphs */
+      .booking-right p {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+        color: #555;
+      }
+
+      /* the row for the first name and last name */
+      .form-row {
+        display: flex;
+        gap: 16px;
+      }
+
+      .form-field {
+        margin-bottom: 16px;
+        width: 100%;
+      }
+
+      .form-field.half {
+        flex: 1;
+      }
+
+      .form-field label { 
+        display: block;
+        font-size: 0.85em;
+        margin-bottom: 4px;
+      }
+
+      /* inputs: look like just a line under them */
+      .form-field input {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #000;
+        padding: 6px 2px;
+        background: transparent;
+        outline: none;
+        font-size: 0.95em;
+        text-align: center;
+      }
+
+      /* submit button */
+      .booking-right .button {
+        background-color: #2d4c3b;
+        color: #f2efe4;
+        font-family: tahoma;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+  
+  <body>
+    <header>
+      <h3>Summit Seekers</h3>
+      <nav>
+        <ul>
+          <li><a href="website.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hikingpad.html">Begineer Hiking Pad</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Summit Seekers</h1>
+        <p>Summit Seekers is a South Island–based guiding service run by local outdoor enthusiasts who love sharing New Zealand’s mountain trails.
+           They focus on beginner-friendly hikes, simple and honest gear advice, and safe guided trips, 
+           all with small groups and clear communication so people new to hiking can build confidence and enjoy the mountains.</p>
+           <a href="about.html" class="more-btn">More</a>
+        </button>
+      </div>
+      <div class="hero-right">
+      </div>
+    </section>
+    <section class="mountain-list">
+      
+      <div class="mountain-row">
+        <img src="mt1.jpg" class="mt-img">
+      
+        <div class="mountain-info">
+          <h2>Aoraki/Mount Cook</h2>
+          <p>Aoraki/Mount Cook is New Zealand’s highest mountain in the Southern Alps. 
+            Most people don’t climb the peak; they hike valley tracks to view it. 
+            The main walk is the Hooker Valley Track, which is easy and takes about 3 hours return to reach a lake with a clear view of Aoraki.</p>
+        </div>
+
+        <div class="mountain-guide">
+          <p>Mountain extra info and guide</p>
+          <a href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/" class="guide-btn">Link to Guide</a>
+        </div>
+      </div>
+
+      <div class="mountain-row">
+        <img src="mt2.png" class="mt-img">
+        
+        <div class="mountain-info">
+          <h2>Roys Peak Track (Wanaka)</h2>
+          <p>Roys Peak Track is a steep, well‑formed summit hike just outside Wānaka, 
+            climbing through farmland and tussock to a famous viewpoint high above Lake Wānaka with panoramic views of the Southern Alps. 
+            The track is about 16 km return with a big steady uphill the whole way, and most people take around 5–6 hours to complete the return hike, 
+            including time for photos at the lookout and near the summit.</p>
+        </div>
+  
+        <div class="mountain-guide">
+          <p>Mountain extra info and guide</p>
+          <a href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/roys-peak-track/" class="guide-btn">Link to Guide</a>
+        </div>
+      </div>
+
+      <div class="mountain-row">
+        <img src="mt3.jpg" class="mt-img">
+        
+        <div class="mountain-info">
+          <h2>Mount Taranaki</h2>
+          <p>Mount Taranaki (Taranaki Maunga) is a 2,518 m cone-shaped volcano in Egmont National Park, 
+            known for steep slopes, fast-changing weather and big coastal views. 
+            The standard North Egmont summit route is roughly 12–13 km return and usually takes about 8–9 hours total for a fit, 
+            well-prepared person in good summer conditions (around 5–6 hours up and 3–4 hours down).</p>
+        </div>
+  
+        <div class="mountain-guide">
+          <p>Mountain extra info and guide</p>
+          <a href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/taranaki/places/te-papa-kura-o-taranaki/things-to-do/tracks/taranaki-maunga-summit-climb/" class="guide-btn">Link to Guide</a>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="hero2">
+      <div class="hero2-left">
+      </div>
+      <div class="hero2-right">
+        <h1>Mountain Checklist and Hiking Guide</h1>
+        <ul class="bp-hike">
+          <li>Sturdy footwear</li>
+          <li>Water</li>
+          <li>Food</li>
+          <li>Navigation Tools</li>
+          <li>Sun Protection</li>
+          <li>First Aid Kit</li>
+          <li>Waterproof Jacket</li>
+        </ul>
+        <a href="hikingpad.html" class="hikeguide-btn">More Info</a>
+      </div>
+    </section>
+
+      <section class="booking-section" id="hire-guide">
+
+        <div class="booking-left">
+          <h1>Secure Your<br>Expert Guide</h1>
+          <h3>Experience the beauty of hiking in New Zealand  <br>by reaching out to a hiker guide from our team!</h3>
+        </div>
+
+        <div class="booking-right">
+          <h3>Tour Guide Booking Hire</h3>
+          <br>
+
+          <form action="mailto:24052@gdc.school.nz" method="post" enctype="text/plain">
+
+            <div class="form-row">
+              <div class="form-field half">
+                <label>First name *</label>
+                <input type="text" name="first-name">
+              </div>
+              <div class="form-field half">
+                  <label>Last name *</label>
+                  <input type="text" name="last-name">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Email address *</label>
+              <input type="email" name="email">
+            </div>
+
+            <div class="form-field">
+              <label>Phone number</label>
+              <input type="tel" name="phone">
+            </div>
+
+            <div class="form-field">
+              <label>Location meetup*</label>
+              <input type="text" name="meetup">
+            </div>
+
+            <div class="form-field">
+              <label>Additional details</label>
+              <input type="text" name="extra">
+            </div>
+
+            <button type="submit" class="button">Submit Hiking Guide</button>
+          </form>
+        </div>
+      </section>
+  </body>
